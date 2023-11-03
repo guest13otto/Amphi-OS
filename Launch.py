@@ -38,7 +38,7 @@ EthernetHandler = EthernetHandler()
 TestEthernetHandler = TestEthernetHandler()
 Logger = Logger(False, False, None, "ethernet.send") # FILE, PRINT, RATE_LIMITER, TOPICS
 EM1 = EM("EM1", "0x34") # change address here
-EM2 = EM("EM2", "0x34") # change address here
+EM2 = EM("EM2", "0x35") # change address here
 Gripper = Gripper("gripper", "0x23", "13000", True)
 
 
