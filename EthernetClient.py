@@ -9,7 +9,8 @@ class EthernetClient(Module):
         super().__init__()
 
         # self.HOST = "169.254.196.165"  # Isaac's Laptop
-        self.HOST = '169.254.243.121' # Silver Laptop 
+        #self.HOST = '169.254.243.121' # Silver Laptop 
+        self.HOST = "169.254.123.187" #TUF laptop
         self.PORT = 226  # The port used by the server
 
         self.connect_to_server()

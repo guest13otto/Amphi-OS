@@ -11,7 +11,7 @@ from Thrusters import Thrusters
 from Logger import Logger
 from EthernetServer import EthernetHandler
 from EthernetServer import TestEthernetHandler
-from USBCameraServer import USBCameraHandler, USBCameraDisplay
+#from USBCameraServer import USBCameraHandler, USBCameraDisplay
 from EM import EM
 from Gripper import Gripper
 import os
@@ -35,12 +35,10 @@ ControlProfileD = ControlProfile(30, 50, "D")
 ThrusterPower = ThrusterPower()
 Thrusters = Thrusters()
 EthernetHandler = EthernetHandler()
-USBCameraHandler = USBCameraHandler()
-USBCameraDisplay = USBCameraDisplay()
 TestEthernetHandler = TestEthernetHandler()
 Logger = Logger(False, False, None, "ethernet.send") # FILE, PRINT, RATE_LIMITER, TOPICS
-EM1 = EM("EM1", "0x32") # change address here
-EM2 = EM("EM2", "0x30") # change address here
+EM1 = EM("EM1", "0x34") # change address here
+EM2 = EM("EM2", "0x34") # change address here
 Gripper = Gripper("gripper", "0x23", "13000", True)
 
 
@@ -55,8 +53,6 @@ mm.register(
             (ThrusterPower, 60),
             (Thrusters, 10),
             (EthernetHandler, 120),
-            (USBCameraHandler, 120),
-            (USBCameraDisplay, 1),
             (EM1, 5),
             (EM2, 5),
             (Gripper, 10),

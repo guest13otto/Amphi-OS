@@ -24,7 +24,7 @@ class EthernetHandler(Module):
         self.conn = None
         self.addr = None
         self.connected = False
-        self.PORT = 226
+        self.PORT = 12345
 
         if not self.check_process():
             raise Exception("USB Port is in use, please close any other programs using this port and restart the program \
@@ -154,17 +154,17 @@ class TestEthernetHandler(Module):
         pub.sendMessage("ethernet.send", message = {"type": "TST", "address": 0x15, "data": [0x20, 0x10, 0x00]})
 
 if __name__ == "__main__":
-    from USBCameraServer import USBCameraHandler, USBCameraDisplay
+ #   from USBCameraServer import USBCameraHandler, USBCameraDisplay
 
     EthernetHandler = EthernetHandler()
     TestEthernetHandler = TestEthernetHandler()
-    USBCameraHandler = USBCameraHandler()
-    USBCameraDisplay = USBCameraDisplay()
+#    USBCameraHandler = USBCameraHandler()
+  #  USBCameraDisplay = USBCameraDisplay()
 
     EthernetHandler.start(200)
     TestEthernetHandler.start(100)
-    USBCameraHandler.start(80)
-    USBCameraDisplay.start(1)
+  #  USBCameraHandler.start(80)
+  #  USBCameraDisplay.start(1)
     
 
 
